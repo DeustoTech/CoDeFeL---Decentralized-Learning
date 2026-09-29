@@ -19,7 +19,7 @@ as fairness, robustness, regularization, or structural consistency.
 
 We model this as a multi-objective problem over the shared model parameters:
 ```math
-\displaystyle\min_{\Theta \in U} \bigl(C_1(\Theta), \ldots, C_M(\Theta), S_1(\Theta), \ldots, S_N(\Theta)\bigr).
+{\Large \min_{\Theta \in U} \bigl(C_1(\Theta), \ldots, C_M(\Theta), S_1(\Theta), \ldots, S_N(\Theta)\bigr).}
 ```
 
 Here, each `C_i` is an agent's empirical training objective and each `S_j` is a coordinator objective. Usually no single model improves 
