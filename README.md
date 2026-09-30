@@ -34,9 +34,12 @@ The notebooks use weighted scalarization to turn the competing objectives into o
 - Larger values give more influence to the coordinator's objective.
 - Values close to `1` strongly constrain local learning and may make optimization less stable.
 
-At every communication round, each agent starts from the current shared model, trains locally for one epoch using its data and the coordinator-aware loss, and sends its updated parameters for averaging. This retains decentralized local computation while allowing the coordinator's preference to shape the updates. Under the paper's convexity, smoothness, and stochastic-gradient assumptions, the associated scalarized method has convergence guarantees and its solutions are weakly Pareto optimal (Pareto optimal when the scalarized solution is unique).
+At every communication round, each agent starts from the current shared model, trains locally for one epoch using its data and the 
+coordinator-aware loss, and sends its updated parameters for averaging. This retains decentralized local computation while allowing the 
+coordinator's preference to shape the updates. Under the paper's convexity, smoothness, and stochastic-gradient assumptions, the associated 
+scalarized method has convergence guarantees and its solutions are weakly Pareto optimal (Pareto optimal when the scalarized solution is unique).
 
-## Experiments
+## Repository contents
 
 | Notebook | Data allocation | What it investigates |
 | --- | --- | --- |
@@ -61,14 +64,17 @@ From this directory, launch Jupyter:
 jupyter notebook
 ```
 
-Open and run either notebook from top to bottom. To explore the coordination trade-off, edit `LAMBDA_STAR` in the training cell (and keep any earlier configuration value consistent). The notebooks save generated plots in `figures_exp_iid/` and `figures_exp02/`, respectively.
+Open and run either notebook from top to bottom. To explore the coordination trade-off, edit `LAMBDA_STAR` in the training cell 
+(and keep any earlier configuration value consistent). The notebooks save generated plots in `figures_exp_iid/` and `figures_exp02/`, respectively.
 
 ## Reference
 
-R. Morales and U. Biccari, *A Multi-Objective Optimization Framework for Decentralized Learning with Coordination Constraints*, 2025. [arXiv:2507.13983](https://arxiv.org/abs/2507.13983).
+R. Morales and U. Biccari, *A Multi-Objective Optimization Framework for Decentralized Learning with Coordination Constraints*, 2025. 
+The manuscript is available in [arXiv:2507.13983](https://arxiv.org/abs/2507.13983).
 
 ## Funding
 
-This project has received funding from the European Research Council (ERC) under the European Union's Horizon 2030 research and innovation programme (grant agreement No. 101096251, CoDeFeL).
+This project has received funding from the European Research Council (ERC) under the European Union's Horizon 2030 research and innovation 
+programme (grant agreement No. 101096251, CoDeFeL).
 
  
